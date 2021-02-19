@@ -5,7 +5,6 @@
   package org.howard.edu.lsp.assignment2.combination;
 
   import java.util.ArrayList;
-  import java.util.Arrays;
 
   public class Combination {
 	private int numArr[], targetNum;
@@ -45,16 +44,12 @@
 		  ArrayList <Integer> tempSubsetIndexHolder = new ArrayList<>();
 		  
 		  //Now we use a bit manipulator technique to find all possible subsets
-		  // of the given array. By using the '&' 'And' and the '<<' 'shift left' operators,
-		  //we take the all subsets that don't have a 0 as bit and exclude them from
-		  // the ones that do. All subsets that do have a 1 bit will be taken into to be
-		  //added into the subset. 
+		  // of the given array.
 		  for(int x  = 0; x < numArr.length;x++) {	  
 			  
 			  //We use this equation to add in the elements within the subset 2^n times.
 			  //If the i & (1 left shift of x bits) is not equal to zero. 
 			  //Add the element into the current subset. 
-			  //else enter an empty subset
 			  if((i & (1 << x)) != 0) {
 				  tempSubsetHolder.add(numArr[x]);
 				  tempSubsetIndexHolder.add(x);
