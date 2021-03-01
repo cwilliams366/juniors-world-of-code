@@ -12,18 +12,20 @@ public class IntegerSet  {
 	// Hint: probably best to use an array list.  You will need to do a little research
 	private List<Integer> set = new ArrayList<Integer>();
 	
-
+	/*A constructor to take in a set of elements
+	@param set takes in a set of integer elements
+	*/
 	public IntegerSet(List<Integer> set) {
 		this.set = set;
 	}
 
-	// Clears the internal representation of the set
+	/*Clears the current class's set of elements*/
     public void clear() {
     List<Integer> tempList = new ArrayList<Integer>();
     set = tempList;
     };
 
-    // Returns the length of the set
+    /*Returns the size of the set*/
     public int length() {
     	return set.size();
     }; // returns the length
@@ -31,6 +33,7 @@ public class IntegerSet  {
      /*
       * Returns true if the 2 sets are equal, false otherwise;
       * Two sets are equal if they contain all of the same values in ANY order.
+      @param Another class object to be used to compare its set with the current class's set
      */
     public boolean equals(IntegerSet b) {
     	//Determines the amount of similar elements within both sets
