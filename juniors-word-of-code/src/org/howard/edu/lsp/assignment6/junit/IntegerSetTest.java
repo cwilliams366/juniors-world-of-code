@@ -59,18 +59,29 @@ public class IntegerSetTest {
 	@Test
 	@DisplayName("Test cases for smallest method")
 	public void testSmallest() throws IntegerSetException {
+		try {
 		//Check for the smallest of the list
 		assertEquals(-10,intSet.smallest());
 		assertEquals(-10,intSet2.smallest());
+		intSet3.smallest();
+		}catch(IntegerSetException e) {
+			assertEquals("!!!Error! Set is empty!!!!!",e.getMessage());
+		}
+		
 	}
 	
 	         @Test
 			@DisplayName("Test cases for the largest method")
 			public void testLargest() throws IntegerSetException {
-	        	//Check for the largest
+	        try {	
+	        	 //Check for the largest
 				assertEquals(10,intSet.largest());
 				assertEquals(12, intSet2.largest());
-			}
+				intSet3.largest();
+	        }catch(IntegerSetException e) {
+	        	assertEquals("!!Error! Set is empty!!",e.getMessage());
+	        }
+		}
 			
 	
 	 @Test

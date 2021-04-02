@@ -101,11 +101,13 @@ public class IntegerSet  {
     * @throws IntegerSetException if the set is empty
     */
     public int smallest() throws IntegerSetException {
+    	int smallest;
     	//Check to see if the set is empty
-    	int smallest = set.get(0);
     	if(isEmpty()) {
     		//Exception will throw if set is empty
     		throw new IntegerSetException("!!!Error! Set is empty!!!!!");
+    	} else {
+    		 smallest = set.get(0);
     	}
     	//Find the smallest element
     	for(int i = 1; i < set.size();i++) {
