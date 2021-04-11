@@ -82,7 +82,7 @@ public class IntegerSet  {
     	//Check to see if the set is empty
     	if(isEmpty()) {
     		//throws exception if set it empty
-    		throw new IntegerSetException("!!Error! Set is empty!!");
+    		//throw new IntegerSetException("!!Error! Set is empty!!");
     	}
     	//Check for largest integer element
       int largest = set.get(0);
@@ -103,7 +103,8 @@ public class IntegerSet  {
     	int smallest = set.get(0);
     	if(isEmpty()) {
     		//Exception will throw if set is empty
-    		throw new IntegerSetException("!!!Error! Set is empty!!!!!");
+    		//throw new IntegerSetException("!!!Error! Set is empty!!!!!");
+    		
     	}
     	//Find the smallest element
     	for(int i = 1; i < set.size();i++) {
