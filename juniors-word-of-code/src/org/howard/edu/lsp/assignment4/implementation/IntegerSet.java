@@ -139,19 +139,11 @@ public class IntegerSet  {
 	 * @param item the element to be removed from current class's set
 	 */
     public void remove(int item) {
-     //Make a temporary list
-      List<Integer> tempList = new ArrayList <Integer>();
-      //Copy the current set list to the temporary
-      tempList = set;
-      //Clear the current set
-      clear();
-    	//Add the new numbers that aren't the specified item
-      for(int i = 0; i < tempList.size();i++) {
-    		if(tempList.get(i) == item) {
-    			continue;
-    		}
-    		add(tempList.get(i));
-    	}
+     for(int i = 0; i < length();i++) {
+    	 if(set.get(i) == item) {
+    		 set.remove(set.get(i));
+    	 }
+     }
     }; 
 
     /** Creates a union set between the current class's and the object argument's
