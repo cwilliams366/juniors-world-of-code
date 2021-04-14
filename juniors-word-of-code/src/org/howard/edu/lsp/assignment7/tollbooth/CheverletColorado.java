@@ -2,13 +2,13 @@ package org.howard.edu.lsp.assignment7.tollbooth;
 
 public class CheverletColorado implements Truck{
 
-	private int weight, axel;
+	private int weight, axle;
 	private String truckName;
 	
-	CheverletColorado(int weight, int axel){
-		this.axel = axel;
-		this.weight = weight;
-		this.truckName = "Chevelet Colorado";
+	public CheverletColorado(int weight, int axle){
+		this.axle = axle;
+        this.weight = weight;
+		this.truckName = "Cheverlet Colorado";
 	}
 
 	@Override
@@ -17,17 +17,15 @@ public class CheverletColorado implements Truck{
 		return truckName;
 	}
 
-	@Override
+	@Override 
 	public int getTruckWeight() {
 		// TODO Auto-generated method stub
 		return weight;
 	}
 
 	@Override
-	public int getAxel() {
+	public int getAxle() {
 		// TODO Auto-generated method stub
-		return axel;
+		return axle;
 	}
-	
-	
 }
