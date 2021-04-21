@@ -53,6 +53,7 @@ class SongsDatabaseTest {
 		temp.add("Battery");
 		temp.add("Thunder Horse");
 		assertEquals(temp,db.getSongs("Metal"));
+		
 	}
 	
 	@Test
@@ -66,9 +67,14 @@ class SongsDatabaseTest {
 		//Test 1
 		assertEquals("Jazz",db.getGenreOfSong("Always There"));
 		//Test 2
-		assertEquals("Metal",db.getGenreOfSong("Dyer's Eve"));
+		assertEquals("Metal",db.getGenreOfSong("Thunder Horse"));
 		//Test 3
 		assertEquals("Rap",db.getGenreOfSong("Gin and Juice"));
+		//Test 4
+		System.out.println(db.getGenreOfSong("Thunder Horse"));
+		System.out.println(db.getGenreOfSong("Savage"));// prints “Rap”
+		System.out.println(db.getGenreOfSong("Always There"));// prints "Jazz”
+
 	}
 	
 }
