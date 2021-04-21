@@ -76,6 +76,13 @@ class RemoveZeroesTest {
 		temp.add(4);
 		rmZero.removeZeroes(intList);
 		assertEquals(temp,intList);
+		//Test 4
+		intList.clear();
+		temp.clear();
+		intList.add(1);
+		temp.add(1);
+		rmZero.removeZeroes(intList);
+		assertEquals(temp,intList);
 	}
 
 }
