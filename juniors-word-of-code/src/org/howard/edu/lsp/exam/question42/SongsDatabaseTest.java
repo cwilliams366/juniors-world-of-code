@@ -31,6 +31,7 @@ class SongsDatabaseTest {
 	@Test
 	@DisplayName("Test for the getSongs method")
 	void testGetSongs() {
+		System.out.println("Get Songs\n===============");
 		//Set up test
 		testAddSong();
 		Set <String> temp = new HashSet<String>();
@@ -39,11 +40,13 @@ class SongsDatabaseTest {
 		temp.add("Savage");
 		temp.add("Gin and Juice");
 		rapSongs = db.getSongs("Rap");
+		System.out.println("Rap Songs: "+db.getSongs("Rap"));
 		assertEquals(temp,rapSongs);
 		//Test 2
 		temp.clear();
 		temp.add("Always There");
 		assertEquals(temp,db.getSongs("Jazz"));
+		System.out.println("Jazz Songs: "+db.getSongs("Jazz"));
 		//Test 3
 		db.addSong("Metal", "Dyer's Eve");
 		db.addSong("Metal", "Battery");
@@ -52,6 +55,7 @@ class SongsDatabaseTest {
 		temp.add("Dyer's Eve");
 		temp.add("Battery");
 		temp.add("Thunder Horse");
+		System.out.println("Metal Songs: "+db.getSongs("Metal"));
 		assertEquals(temp,db.getSongs("Metal"));
 		
 	}
@@ -59,6 +63,7 @@ class SongsDatabaseTest {
 	@Test
 	@DisplayName("Test for the getGenreOfSong method")
 	void testGetGenreOfSong() {
+		System.out.println("\n\nGenre Of Songs\n==============");
 		//Set up
 	    testAddSong();
 		db.addSong("Metal", "Dyer's Eve");
