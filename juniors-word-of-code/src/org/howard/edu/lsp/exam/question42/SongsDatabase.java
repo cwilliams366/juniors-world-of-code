@@ -25,6 +25,7 @@ public class SongsDatabase {
 
 	/**
 	 *  Return the Set that contains all songs for a genre 
+	 *  @return returns the list of songs
 	 */
 	public Set<String> getSongs(String genre) {
 		return map.get(genre);
@@ -32,6 +33,7 @@ public class SongsDatabase {
 
 	/**
 	 *  Return genre, i.e., jazz, given a song title 
+	 *  @return return the genre of the song
 	 */
 	public String getGenreOfSong(String songTitle) {
 		for(Entry<String, Set<String>> temp: map.entrySet()) {
